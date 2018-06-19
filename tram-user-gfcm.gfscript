@@ -1,0 +1,9 @@
+i -s -nocf -preproc=./mkPresentSingle -optimize=share_subs Tram/TramUserFin.gf
+i -s -nocf -preproc=./mkPresentSingle -optimize=share_subs Tram/TramUserIta.gf
+i -s -nocf -preproc=./mkPresentSingle -optimize=share_subs Tram/TramUserFre.gf
+i -s -nocf -preproc=./mkPresentSingle -optimize=share_subs Tram/TramUserSpa.gf
+i -s -nocf -preproc=./mkPresentSingle -optimize=share_subs Tram/TramUserGer.gf
+i -s -nocf -preproc=./mkPresentSingle -optimize=share_subs Tram/TramUserEng.gf
+i -s -nocf -preproc=./mkPresentSingle -optimize=share_subs Tram/TramUserSwe.gf
+i -s -nocf -preproc=./mkPresentSingle -optimize=share_subs Tram/TramUserSem.gf
+pm -printer=gfcm | wf tram-user-corpus.gfcm

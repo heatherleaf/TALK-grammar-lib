@@ -1,0 +1,5 @@
+i -s MiniSystemEng.gf
+i -s MiniSystemSwe.gf
+i -s MiniSystemGer.gf
+i -s MiniSystemSem.gf
+rf mini-trees.xml | tb -trees | l -multi 

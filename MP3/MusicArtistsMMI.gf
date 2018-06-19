@@ -1,0 +1,123 @@
+
+incomplete concrete MusicArtistsMMI of MusicArtists =
+	open MusicArtists, (Sem=MusicArtistsSem), (MM=GodisMM), Cat in {
+
+lincat Artist = MM.Semantics ** NP;
+
+lin
+
+-- Swedish artists
+abba = abba ** MM.sem (Sem.abba);
+adolphson_och_falk = adolphson_och_falk ** MM.sem (Sem.adolphson_och_falk);
+anne_lie_ryde = anne_lie_ryde ** MM.sem (Sem.anne_lie_ryde);
+bo_kaspers_orkester = bo_kaspers_orkester ** MM.sem (Sem.bo_kaspers_orkester);
+christer_sandelin = christer_sandelin ** MM.sem (Sem.christer_sandelin);
+dan_hylander_och_rmb = dan_hylander_och_rmb ** MM.sem (Sem.dan_hylander_och_rmb);
+di_leva = di_leva ** MM.sem (Sem.di_leva);
+dilba = dilba ** MM.sem (Sem.dilba);
+docent_dod = docent_dod ** MM.sem (Sem.docent_dod);
+dr_alban = dr_alban ** MM.sem (Sem.dr_alban);
+ebba_gron = ebba_gron ** MM.sem (Sem.ebba_gron);
+eldkvarn = eldkvarn ** MM.sem (Sem.eldkvarn);
+eric_gadd = eric_gadd ** MM.sem (Sem.eric_gadd);
+eva_dahlgren = eva_dahlgren ** MM.sem (Sem.eva_dahlgren);
+freda = freda ** MM.sem (Sem.freda);
+gyllene_tider = gyllene_tider ** MM.sem (Sem.gyllene_tider);
+imperiet = imperiet ** MM.sem (Sem.imperiet);
+irma = irma ** MM.sem (Sem.irma);
+jakob_hellman = jakob_hellman ** MM.sem (Sem.jakob_hellman);
+jumper = jumper ** MM.sem (Sem.jumper);
+kent = kent ** MM.sem (Sem.kent);
+lars_winnerback = lars_winnerback ** MM.sem (Sem.lars_winnerback);
+lisa_ekdahl = lisa_ekdahl ** MM.sem (Sem.lisa_ekdahl);
+lisa_nilsson = lisa_nilsson ** MM.sem (Sem.lisa_nilsson);
+lolita_pop = lolita_pop ** MM.sem (Sem.lolita_pop);
+lustans_lakejer = lustans_lakejer ** MM.sem (Sem.lustans_lakejer);
+marie_fredriksson = marie_fredriksson ** MM.sem (Sem.marie_fredriksson);
+mauro_scocco = mauro_scocco ** MM.sem (Sem.mauro_scocco);
+mikael_rickfors = mikael_rickfors ** MM.sem (Sem.mikael_rickfors);
+mikael_wiehe = mikael_wiehe ** MM.sem (Sem.mikael_wiehe);
+monica_tornell = monica_tornell ** MM.sem (Sem.monica_tornell);
+nordman = nordman ** MM.sem (Sem.nordman);
+norum_och_nilsson = norum_och_nilsson ** MM.sem (Sem.norum_och_nilsson);
+orup = orup ** MM.sem (Sem.orup);
+patrik_isaksson = patrik_isaksson ** MM.sem (Sem.patrik_isaksson);
+peter_lemarc = peter_lemarc ** MM.sem (Sem.peter_lemarc);
+petter = petter ** MM.sem (Sem.petter);
+peps_persson = peps_persson ** MM.sem (Sem.peps_persson);
+ratata = ratata ** MM.sem (Sem.ratata);
+robyn = robyn ** MM.sem (Sem.robyn);
+roger_pontare = roger_pontare ** MM.sem (Sem.roger_pontare);
+roxette = roxette ** MM.sem (Sem.roxette);
+staffan_hellstrand = staffan_hellstrand ** MM.sem (Sem.staffan_hellstrand);
+stakka_bo = stakka_bo ** MM.sem (Sem.stakka_bo);
+stefan_andersson = stefan_andersson ** MM.sem (Sem.stefan_andersson);
+stina_nordenstam = stina_nordenstam ** MM.sem (Sem.stina_nordenstam);
+tomas_ledin = tomas_ledin ** MM.sem (Sem.tomas_ledin);
+ulf_lundell = ulf_lundell ** MM.sem (Sem.ulf_lundell);
+uno_svenningsson = uno_svenningsson ** MM.sem (Sem.uno_svenningsson);
+viba_femba = viba_femba ** MM.sem (Sem.viba_femba);
+
+-- Artists using english pronounciation
+ace_of_base = ace_of_base ** MM.sem (Sem.ace_of_base);
+arctic_monkeys = arctic_monkeys ** MM.sem (Sem.arctic_monkeys);
+ark = ark ** MM.sem (Sem.ark);
+atomic_swing = atomic_swing ** MM.sem (Sem.atomic_swing);
+beatles = beatles ** MM.sem (Sem.beatles);
+beborn_beton = beborn_beton ** MM.sem (Sem.beborn_beton);
+billy_idol = billy_idol ** MM.sem (Sem.billy_idol);
+britney_spears = britney_spears ** MM.sem (Sem.britney_spears);
+cardigans = cardigans ** MM.sem (Sem.cardigans);
+chemical_brothers = chemical_brothers ** MM.sem (Sem.chemical_brothers);
+clash = clash ** MM.sem (Sem.clash);
+covenant = covenant ** MM.sem (Sem.covenant);
+creeps = creeps ** MM.sem (Sem.creeps);
+cure = cure ** MM.sem (Sem.cure);
+dolly_parton = dolly_parton ** MM.sem (Sem.dolly_parton);
+eagle_eye_cherry = eagle_eye_cherry ** MM.sem (Sem.eagle_eye_cherry);
+elvis_presley = elvis_presley ** MM.sem (Sem.elvis_presley);
+eminem = eminem ** MM.sem (Sem.eminem);
+enigma = enigma ** MM.sem (Sem.enigma);
+enya = enya ** MM.sem (Sem.enya);
+europe = europe ** MM.sem (Sem.europe);
+fergie = fergie ** MM.sem (Sem.fergie);
+fifty_cent = fifty_cent ** MM.sem (Sem.fifty_cent);
+garbage = garbage ** MM.sem (Sem.garbage);
+god_speed_black_emperor = god_speed_black_emperor ** MM.sem (Sem.god_speed_black_emperor);
+green_day = green_day ** MM.sem (Sem.green_day);
+guns_and_roses = guns_and_roses ** MM.sem (Sem.guns_and_roses);
+jam = jam ** MM.sem (Sem.jam);
+jessica_simpson = jessica_simpson ** MM.sem (Sem.jessica_simpson);
+justin_timberlake = justin_timberlake ** MM.sem (Sem.justin_timberlake);
+kate_bush = kate_bush ** MM.sem (Sem.kate_bush);
+led_zeppelin = led_zeppelin ** MM.sem (Sem.led_zeppelin);
+lee_morgan = lee_morgan ** MM.sem (Sem.lee_morgan);
+madonna = madonna ** MM.sem (Sem.madonna);
+marvin_gaye = marvin_gaye ** MM.sem (Sem.marvin_gaye);
+massive_attack = massive_attack ** MM.sem (Sem.massive_attack);
+michael_jackson = michael_jackson ** MM.sem (Sem.michael_jackson);
+morlocks = morlocks ** MM.sem (Sem.morlocks);
+morrisey = morrisey ** MM.sem (Sem.morrisey);
+mr_vegas = mr_vegas ** MM.sem (Sem.mr_vegas);
+mudhoney = mudhoney ** MM.sem (Sem.mudhoney);
+nitzer_ebb = nitzer_ebb ** MM.sem (Sem.nitzer_ebb);
+norah_jones = norah_jones ** MM.sem (Sem.norah_jones);
+ozzy_osbourne = ozzy_osbourne ** MM.sem (Sem.ozzy_osbourne);
+pain = pain ** MM.sem (Sem.pain);
+pet_shop_boys = pet_shop_boys ** MM.sem (Sem.pet_shop_boys);
+pink_floyd = pink_floyd ** MM.sem (Sem.pink_floyd);
+pixies = pixies ** MM.sem (Sem.pixies);
+prodigy = prodigy ** MM.sem (Sem.prodigy);
+project_pitchfork = project_pitchfork ** MM.sem (Sem.project_pitchfork);
+red_hot_chili_peppers = red_hot_chili_peppers ** MM.sem (Sem.red_hot_chili_peppers);
+rolling_stones = rolling_stones ** MM.sem (Sem.rolling_stones);
+shakira = shakira ** MM.sem (Sem.shakira);
+shania_twain = shania_twain ** MM.sem (Sem.shania_twain);
+stephen_simmonds = stephen_simmonds ** MM.sem (Sem.stephen_simmonds);
+trance_dance = trance_dance ** MM.sem (Sem.trance_dance);
+vacuum = vacuum ** MM.sem (Sem.vacuum);
+trace_adkins = trace_adkins ** MM.sem (Sem.trace_adkins);
+vnv_nation = vnv_nation ** MM.sem (Sem.vnv_nation);
+usher = usher ** MM.sem (Sem.usher);
+
+}

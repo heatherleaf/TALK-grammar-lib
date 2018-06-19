@@ -1,0 +1,124 @@
+TramUseI
+
+stop_to_stop
+stop_from_stop
+
+ask_S help
+minä tahdon saada avun ;
+quiero pedir de la ayuda ;
+je veux trouver de l' aide ;
+voglio trovare dell' aiuta ;
+ich will Hilfe haben ;
+--jag vill ha hjälp ;
+--i want to get help ;
+
+icm_per_neg
+++URSÄKTA ;
+--pardon ;
+--pardon ;
+++poi ;
+--pardon ;
+--ursäkta ;
+--pardon ;
+
+++ask_S top
+++starte um ;
+
+=====System
+
+godis_utterance (ConsMove (askAltQ (vp_altq (BaseVPProposition (action top) (issue dest_stop_Q)))) (BaseMove (request top)))
+++tahdot &+ ko sinä aloittaa alusta tai tietää mille pysäkille sinä tahdot mennä ?
+++¿ queréis reempezar o saber a cuale parada queréis ir ? reempeza .
+++tu veux recommencer ou adorer c' à quel arrêt tu veux aller ? recommence .
+++vuoi ricominciare o sapere ciò a quale fermata vuoi andare ? ricomincia .
+willst du zu um starten oder nach welcher Haltestelle du fahren willst zu wissen ? starte um .
+
+
+godis_utterance (BaseICM (icm_reaccommodate_ynq (ynq (shortest_route_P (oneLeg (lineLeg Tram6 Biskopsgarden Brunnsparken))))))
+Vuelvo a si tomáis tranvía número 6 de biskopsgarden a brunnsparken .
+++Reprendre si tu prends tram numéro 6 de biskopsgarden à brunnsparken ?
+++Ritorniamo a si prendi tram numero 6 di biskopsgarden a brunnsparken ?
+++Zurück zur Frage ob du die Straßenbahn Nummer 6 von biskopsgården nach brunnsparken nimmst ?
+
+
+
+godis_utterance (BaseICM (icm_und_pos_negvp (issue shortest_route_Q)))
+tu ne veux pas adorer quel est la plus courte voie .
+non vuoi sapere che cosa è la più corta via .
+
+
+godis_utterance (ConsICM (icm_und_pos_vp (action help)) (ConsMove (shortAns (stop Hinnebacksgatan)) (ConsICM (icm_accommodate_whq action_Q) (BaseMove (confirm help)))))
+sinä tahdot saada avun . hinnebäcksgatan . Selvä . minä olen saadmassa avun .
+queréis pedir de la ayuda . hinnebacksgatan . Comprendo . pido de la ayuda .
+tu veux trouver de l' aide . hinnebacksgatan . Compris . je trouve de l' aide .
+vuoi trovare dell' aiuta . hinnebacksgatan . Capito . trovo dell' aiuta .
+du willst Hilfe haben . hinnebäcksgatan . Natürlich . ich habe Hilfe .
+du vill ha hjälp . hinnebäcksgatan . Visst . jag har hjälp .
+you want to get help . hinnebacksgatan . Alright . i am getting help .
+
+godis_utterance (BaseMove (confirm help))
+minä olen saadmassa avun .
+pido de la ayuda .
+je trouve de l' aide .
+trovo dell' aiuta .
+ich habe Hilfe .
+jag har hjälp .
+i am getting help .
+
+++GodisLexicon???: youPol_Pron
+
+GodisSystem???.gf: UttImpPol
+
+godis_utterance (ConsICM (icm_acc_neg_prop (dest_stop_P Linneplatsen)) (BaseICM icm_loadplan))
+ei ole OPTION että sinä tahdot mennä linnéplatsenille . Katsotaan .
+queréis ir a linneplatsen no es alternativa . Veamos .
+tu veux aller à linneplatsen n'est pas une alternative . Voyons .
+vuoi andare a linneplatsen non è un alternativo . Vediamo .
+du willst nach linneplatsen fahren , das ist nich eine Alternative . Sehen wir .
+du vill åka till linneplatsen , det går inte att välja . Få se .
+you want to go to linneplatsen , that is not a valid option . Let's see .
+
+godis_utterance (BaseMove (request help))
+saad apu .
+pide de la ayuda .
+trouve de l' aide .
+trova dell' aiuta .
+hab Hilfe .
+ha hjälp .
+get help .
+
+
+godis_utterance (BaseICM (icm_per_pos "x"))
+Luulin että sanoit että "x" .
+Vos he oído decir que "x" .
+Je vous ai cru dire "x" .
+ho sentito dire che "x" .
+Ich glaubte , daß Sie sagten "x" .
+
+godis_utterance (BaseMove (ask dest_stop_Q))
+¿ a cuale parada queréis ir ?
+à quel arrêt tu veux aller ?
+a quale fermata vuoi andare ?
+
+godis_utterance (ConsMove answer_yes (BaseICM (icm_reraise_whq action_Q)))
+Kyllä . Takaisin kohtaan minkä voin tehdä sinulle .
+
+godis_utterance (BaseMove (askAltQ (vp_altq (BaseVPProposition (action top) (issue dest_stop_Q)))))
+tahdot &+ ko sinä aloittaa alusta tai tietää mille pysäkille sinä tahdot mennä ?
+¿ queréis reempezar o saber a cuale parada queréis ir ?
+tu veux recommencer ou adorer c' à quel arrêt tu veux aller ?
+vuoi ricominciare o sapere ciò a quale fermata vuoi andare ?
+
+++godis_utterance (ConsICM icm_sem_neg (BaseMove answer_no))
+++Tut mir Leid , ich weiß nichts über . Nein .
+++Jag förstår inte riktigt . Nej .
+
+++icm_acc_neg_que        q = fullStop  ** prefixUtt
+++    ["Tut mir Leid , ich weiß nichts darüber"]
+++    (UttAdv (AdvSC (EmbedQS (useQCl q))));
+++    ["Pardon , je ne sais rien du sujet"]
+++ ["Lo siento, no sé nada del tema"]
+++ ["Mi spiace, non so niente del tema"]
+
+++ExtraFin.vai_Conj
+++GodisSystemFin.vp_altq

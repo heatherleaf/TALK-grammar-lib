@@ -1,0 +1,27 @@
+e 
+i -s -optimize=share_subs -nocf -path=Tram:Common:prelude:present Tram/TramSystemEng.gf 
+s 
+pm -printer=gfcm | wf output/temp-TramSystemEng.gfcm 
+e 
+i -s -optimize=share_subs -nocf -path=Tram:Common:prelude:present Tram/TramSystemSwe.gf 
+s 
+pm -printer=gfcm | wf output/temp-TramSystemSwe.gfcm 
+e 
+i -s -optimize=share_subs -nocf -path=Tram:Common:prelude:present Tram/TramSystemIta.gf 
+s 
+pm -printer=gfcm | wf output/temp-TramSystemIta.gfcm 
+e 
+i -s -optimize=share_subs -nocf -path=Tram:Common:prelude:present Tram/TramSystemFre.gf 
+s 
+pm -printer=gfcm | wf output/temp-TramSystemFre.gfcm 
+e 
+i -s -optimize=share_subs -nocf -path=Tram:Common:prelude:present Tram/TramSystemSpa.gf 
+s 
+pm -printer=gfcm | wf output/temp-TramSystemSpa.gfcm 
+e 
+i output/temp-TramSystemEng.gfcm 
+i output/temp-TramSystemSwe.gfcm 
+i output/temp-TramSystemIta.gfcm 
+i output/temp-TramSystemFre.gfcm 
+i output/temp-TramSystemSpa.gfcm 
+pm -printer=header | wf output/TramSystem.gfcm 

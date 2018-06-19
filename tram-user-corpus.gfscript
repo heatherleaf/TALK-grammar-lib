@@ -1,0 +1,2 @@
+i -s tram-user-corpus.gfcm
+rf tram-user-trees.xml | tb -trees | l -multi -all 

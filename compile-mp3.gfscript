@@ -1,0 +1,47 @@
+dc %gfcm i -nocf -optimize=share_subs -preproc=./mkSingleApp      #1
+dc %gsl  i -nocf -optimize=share_subs -preproc=./mkSingleUnimodal #1
+
+
+! rm -f output/MP3*.gfcm output/MP3*.cfgm 
+! rm -f MP3/*.gfc MP3/*.gfr Common/*.gfc Common/*.gfr 
+
+! echo '== Creating GFCM+CFGM for MP3User'
+%gfcm MP3/MP3UserEng.gf 
+%gfcm MP3/MP3UserSwe.gf 
+%gfcm MP3/MP3UserSem.gf 
+s
+pm -printer=header | wf output/MP3User.gfcm 
+pm -printer=cfgm   | wf output/MP3User.cfgm
+
+! echo '== Creating GFCM+CFGM for MP3System'
+%gfcm MP3/MP3SystemEng.gf 
+%gfcm MP3/MP3SystemSwe.gf 
+%gfcm MP3/MP3SystemSem.gf 
+s
+pm -printer=header | wf output/MP3System.gfcm 
+pm -printer=cfgm   | wf output/MP3System.cfgm
+
+! echo '== Creating GFCM+CFGM for MP3SystemMM'
+! echo '= Reading MP3SystemMM'
+%gfcm MP3/MP3SystemMMEng.gf 
+%gfcm MP3/MP3SystemMMSwe.gf 
+%gfcm MP3/MP3SystemSem.gf 
+s
+pm -printer=header | wf output/MP3SystemMM.gfcm 
+pm -printer=cfgm   | wf output/MP3SystemMM.cfgm 
+
+
+! rm -f output/MP3*.gsl
+! rm -f MP3/*.gfc MP3/*.gfr Common/*.gfc Common/*.gfr 
+
+! echo '== Creating GSL for MP3UserEng'
+e
+%gsl MP3/MP3UserEng.gf 
+s
+pg -printer=gsl | wf output/MP3UserEng.gsl
+
+! echo '== Creating GSL for MP3UserSwe'
+e
+%gsl MP3/MP3UserSwe.gf 
+s
+pg -printer=gsl | wf output/MP3UserSwe.gsl

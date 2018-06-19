@@ -1,0 +1,1 @@
+grep -v "\-\-\# multiapp" $1

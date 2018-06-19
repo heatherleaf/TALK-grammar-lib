@@ -1,0 +1,101 @@
+digraph modulgraf {
+
+labeljust = l;
+color = red;
+fontcolor = red;
+
+subgraph cluster_Resource {
+	label = "The Resource Grammar";
+	Grammar;
+}
+
+subgraph cluster_Common {
+	label = "Common GoDiS Grammars";
+	GodisLang;
+	GodisSystem;
+	GodisUser;
+}
+
+edge [style=dotted];
+Grammar -> GodisLang;
+
+subgraph cluster_MP3 {
+	label = "DJGoDiS Grammars";
+	MP3System;
+	MP3Lexicon;
+	MP3Global;
+	MP3User;
+	MP3Delux;
+	Music;
+	MusicArtists;
+	MusicSongs;
+
+	edge [style=solid];
+	MusicArtists -> Music;
+	MusicSongs -> Music;
+	Music -> MP3System;
+	Music -> MP3Global;
+	MP3Global -> MP3User;
+	MP3User -> MP3Delux;
+
+	edge [style=dotted];
+	MP3Lexicon -> MP3System;
+	MP3Lexicon -> MP3Global;
+	MP3Lexicon -> MP3User;
+	MP3System -> MP3Global;
+	MP3System -> MP3User;
+}
+
+edge [style=solid];
+GodisSystem -> MP3System;
+GodisUser -> MP3Global;
+
+edge [style=dotted];
+GodisLang -> MP3System;
+GodisLang -> MP3Global;
+GodisLang -> MP3User;
+
+subgraph cluster_Delux {
+	label = "DeLux Grammars";
+	DeluxSystem;
+	DeluxLexicon;
+	DeluxGlobal;
+	DeluxUser;
+	DeluxMP3;
+	Stops;
+	Lines;
+
+	edge [style=solid];
+	Stops -> DeluxSystem;
+	Lines -> DeluxSystem;
+	Stops -> DeluxGlobal;
+	DeluxGlobal -> DeluxUser;
+	DeluxUser -> DeluxMP3;
+
+	edge [style=dotted];
+	DeluxLexicon -> DeluxSystem;
+	DeluxLexicon -> DeluxGlobal;
+	DeluxLexicon -> DeluxUser;
+	DeluxSystem -> DeluxGlobal;
+	DeluxSystem -> DeluxUser;
+}
+
+edge [style=solid];
+GodisSystem -> DeluxSystem;
+GodisUser -> DeluxGlobal;
+
+edge [style=dotted];
+GodisLang -> DeluxSystem;
+GodisLang -> DeluxGlobal;
+GodisLang -> DeluxUser;
+
+edge [style=solid];
+MP3Global -> DeluxMP3;
+DeluxGlobal -> MP3Delux;
+
+node [shape=Mrecord,color=blue,fontcolor=blue];
+XXXSystem [label="{XXXSystem | {Sem | {I | {Eng | Swe | ...}} | {MMI | {MMEng | MMSwe | ...}}}}"];
+XXXUser [label="{XXXUser | {Sem | Eng | Swe | ...}}"];
+
+
+}

@@ -1,0 +1,935 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns="http://www.ling.gu.se/projekt/talk/owl-godis#"
+  xml:base="http://www.ling.gu.se/projekt/talk/owl-godis">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="ConsultDB">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="PlanConstruct"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="which_N_sg">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="IP"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ForgetAll">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#PlanConstruct"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="DevGet">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="DeviceConstruct"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="PlansAndDevices"/>
+  <owl:Class rdf:ID="Place">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Location"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="SubPlan">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Plan"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Predicate">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Semantics"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="NP"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="A">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Syntax"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="NP_Adv">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#NP"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Device">
+    <rdfs:subClassOf rdf:resource="#PlansAndDevices"/>
+  </owl:Class>
+  <owl:Class rdf:ID="indef_N_pl">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#NP"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Adv">
+    <rdfs:subClassOf rdf:resource="#Syntax"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Bind">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#PlanConstruct"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Sort">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#NP"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Semantics"/>
+  </owl:Class>
+  <owl:Class rdf:ID="VP">
+    <rdfs:subClassOf rdf:resource="#Syntax"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Street">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Location"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Number">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Individuals"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Prep_NP">
+    <rdfs:subClassOf rdf:resource="#Adv"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Time">
+    <rdfs:subClassOf rdf:resource="#Number"/>
+  </owl:Class>
+  <owl:Class rdf:ID="DevQuery">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#DeviceConstruct"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Route">
+    <rdfs:subClassOf rdf:resource="#Individuals"/>
+  </owl:Class>
+  <owl:Class rdf:ID="PN">
+    <rdfs:subClassOf rdf:resource="#Syntax"/>
+  </owl:Class>
+  <owl:Class rdf:about="#PlanConstruct">
+    <rdfs:subClassOf rdf:resource="#PlansAndDevices"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Date">
+    <rdfs:subClassOf rdf:resource="#Number"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Language"/>
+  <owl:Class rdf:ID="IfThenElse">
+    <rdfs:subClassOf rdf:resource="#PlanConstruct"/>
+  </owl:Class>
+  <owl:Class rdf:ID="AppliedPred">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Proposition"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Line">
+    <rdfs:subClassOf rdf:resource="#Individuals"/>
+  </owl:Class>
+  <owl:Class rdf:ID="QCl">
+    <rdfs:subClassOf rdf:resource="#Syntax"/>
+  </owl:Class>
+  <owl:Class rdf:ID="DevSet">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#DeviceConstruct"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="LegList">
+    <rdfs:subClassOf rdf:resource="#Individuals"/>
+  </owl:Class>
+  <owl:Class rdf:ID="BusLine">
+    <rdfs:subClassOf rdf:resource="#Line"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Plan">
+    <rdfs:subClassOf rdf:resource="#PlansAndDevices"/>
+  </owl:Class>
+  <owl:Class rdf:ID="V2_NP">
+    <rdfs:subClassOf rdf:resource="#VP"/>
+  </owl:Class>
+  <owl:Class rdf:ID="what_is_NP">
+    <rdfs:subClassOf rdf:resource="#QCl"/>
+  </owl:Class>
+  <owl:Class rdf:ID="use_V">
+    <rdfs:subClassOf rdf:resource="#VP"/>
+  </owl:Class>
+  <owl:Class rdf:ID="indef_N_sg">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#NP"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Raise">
+    <rdfs:subClassOf rdf:resource="#PlanConstruct"/>
+  </owl:Class>
+  <owl:Class rdf:ID="City">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Location"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="generic_VP">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Cl"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Leg">
+    <rdfs:subClassOf rdf:resource="#Individuals"/>
+  </owl:Class>
+  <owl:Class rdf:ID="TramLine">
+    <rdfs:subClassOf rdf:resource="#Line"/>
+  </owl:Class>
+  <owl:Class rdf:about="#DeviceConstruct">
+    <rdfs:subClassOf rdf:resource="#PlanConstruct"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Action">
+    <rdfs:subClassOf rdf:resource="#Semantics"/>
+  </owl:Class>
+  <owl:Class rdf:ID="V2">
+    <rdfs:subClassOf rdf:resource="#Syntax"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Conj">
+    <rdfs:subClassOf rdf:resource="#Syntax"/>
+  </owl:Class>
+  <owl:Class rdf:ID="N">
+    <rdfs:subClassOf rdf:resource="#Syntax"/>
+  </owl:Class>
+  <owl:Class rdf:ID="V3">
+    <rdfs:subClassOf rdf:resource="#Syntax"/>
+  </owl:Class>
+  <owl:Class rdf:ID="StatusFailed">
+    <rdfs:subClassOf rdf:resource="#Proposition"/>
+  </owl:Class>
+  <owl:Class rdf:ID="this_N_sg">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#NP"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="V">
+    <rdfs:subClassOf rdf:resource="#Syntax"/>
+  </owl:Class>
+  <owl:Class rdf:about="#IP">
+    <rdfs:subClassOf rdf:resource="#Syntax"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Stop">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Location"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Pron">
+    <rdfs:subClassOf rdf:resource="#Syntax"/>
+  </owl:Class>
+  <owl:Class rdf:ID="the_N_sg">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#NP"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="FindoutSet">
+    <rdfs:subClassOf rdf:resource="#PlanConstruct"/>
+  </owl:Class>
+  <owl:Class rdf:ID="FerryLine">
+    <rdfs:subClassOf rdf:resource="#Line"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ClauseForm"/>
+  <owl:Class rdf:ID="Done">
+    <rdfs:subClassOf rdf:resource="#Proposition"/>
+  </owl:Class>
+  <owl:Class rdf:ID="NegatedPred">
+    <rdfs:subClassOf rdf:resource="#Proposition"/>
+  </owl:Class>
+  <owl:Class rdf:ID="DeviceCommand">
+    <rdfs:subClassOf rdf:resource="#PlansAndDevices"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Det">
+    <rdfs:subClassOf rdf:resource="#Syntax"/>
+  </owl:Class>
+  <owl:Class rdf:ID="the_A_super_N_sg">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#NP"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="which_N_do_you_want_to_V2">
+    <rdfs:subClassOf rdf:resource="#QCl"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Location">
+    <rdfs:subClassOf rdf:resource="#Individuals"/>
+  </owl:Class>
+  <owl:Class rdf:ID="you_want_to_VP">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Cl"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="which_N_pl">
+    <rdfs:subClassOf rdf:resource="#IP"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Cl">
+    <rdfs:subClassOf rdf:resource="#Syntax"/>
+  </owl:Class>
+  <owl:Class rdf:ID="GodisSemantics"/>
+  <owl:Class rdf:ID="indef_A_posit_N_sg">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#NP"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="these_N_pl">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#NP"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Findout">
+    <rdfs:subClassOf rdf:resource="#PlanConstruct"/>
+  </owl:Class>
+  <owl:Class rdf:ID="DevDo">
+    <rdfs:subClassOf rdf:resource="#DeviceConstruct"/>
+  </owl:Class>
+  <owl:Class rdf:ID="the_N_pl">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#NP"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#NP">
+    <rdfs:subClassOf rdf:resource="#Syntax"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Prep">
+    <rdfs:subClassOf rdf:resource="#Syntax"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Area">
+    <rdfs:subClassOf rdf:resource="#Location"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="predicate_value">
+    <rdfs:range rdf:resource="#Individuals"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#DevSet"/>
+          <owl:Class rdf:about="#AppliedPred"/>
+          <owl:Class rdf:about="#NegatedPred"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="precondition">
+    <rdfs:domain rdf:resource="#PlanConstruct"/>
+    <rdfs:range rdf:resource="#PlanConstruct"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="usrQuestion">
+    <rdfs:domain rdf:resource="#Predicate"/>
+    <rdfs:range rdf:resource="#Syntax"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="route_leg">
+    <rdfs:range rdf:resource="#Leg"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="argument_3">
+    <rdfs:domain rdf:resource="#Individuals"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="dtrAdv">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="#Adv"/>
+    <rdfs:domain rdf:resource="#NP_Adv"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="dtrV2">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#V2_NP"/>
+          <owl:Class rdf:about="#which_N_do_you_want_to_V2"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="#V2"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="sysRequest">
+    <rdfs:range rdf:resource="#VP"/>
+    <rdfs:domain rdf:resource="#Action"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="sysAnswer">
+    <rdfs:domain rdf:resource="#Predicate"/>
+    <rdfs:range rdf:resource="#Cl"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="leg_line">
+    <rdfs:range rdf:resource="#Line"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="usrAnswer">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Predicate"/>
+          <owl:Class rdf:about="#Sort"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="#Syntax"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="clauseForm">
+    <rdfs:range rdf:resource="#ClauseForm"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Action"/>
+          <owl:Class rdf:about="#Predicate"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="leg_end_stop">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="#Stop"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="leg_start_stop">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="#Stop"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="postcondition">
+    <rdfs:domain rdf:resource="#Plan"/>
+    <rdfs:range rdf:resource="#Proposition"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="plan_construct">
+    <rdfs:domain rdf:resource="#Plan"/>
+    <rdfs:range rdf:resource="#PlanConstruct"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="dtrA">
+    <rdfs:range rdf:resource="#A"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#the_A_super_N_sg"/>
+          <owl:Class rdf:about="#indef_A_posit_N_sg"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="predicate">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Findout"/>
+          <owl:Class rdf:about="#Raise"/>
+          <owl:Class rdf:about="#Bind"/>
+          <owl:Class rdf:about="#ConsultDB"/>
+          <owl:Class rdf:about="#DevQuery"/>
+          <owl:Class rdf:about="#DevSet"/>
+          <owl:Class rdf:about="#DevGet"/>
+          <owl:Class rdf:about="#AppliedPred"/>
+          <owl:Class rdf:about="#NegatedPred"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="#Predicate"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="usrRequest">
+    <rdfs:domain rdf:resource="#Action"/>
+    <rdfs:range rdf:resource="#Syntax"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="sysQuestion">
+    <rdfs:domain rdf:resource="#Predicate"/>
+    <rdfs:range rdf:resource="#QCl"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="device_command">
+    <rdfs:range rdf:resource="#DeviceCommand"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#DevDo"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="class">
+    <rdfs:domain rdf:resource="#Sort"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="argument_2">
+    <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#Individuals"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="proposition">
+    <rdfs:range rdf:resource="#Proposition"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#FindoutSet"/>
+          <owl:Class rdf:about="#IfThenElse"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="action_or_command">
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Action"/>
+          <owl:Class rdf:about="#DeviceCommand"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#StatusFailed"/>
+          <owl:Class rdf:about="#Done"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="dtrV">
+    <rdfs:domain rdf:resource="#use_V"/>
+    <rdfs:range rdf:resource="#V"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="argument_1">
+    <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#Individuals"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="device">
+    <rdfs:range rdf:resource="#Device"/>
+    <rdfs:domain rdf:resource="#DeviceConstruct"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="owlLang">
+    <rdfs:domain rdf:resource="#Language"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="leg_length">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="resourcePath">
+    <rdfs:domain rdf:resource="#Language"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:FunctionalProperty rdf:ID="godis_semantics">
+    <rdfs:domain rdf:resource="#Individuals"/>
+    <rdfs:range rdf:resource="#GodisSemantics"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="plan_if_true">
+    <rdfs:range rdf:resource="#Plan"/>
+    <rdfs:domain rdf:resource="#IfThenElse"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="sort">
+    <rdfs:range rdf:resource="#Sort"/>
+    <rdfs:domain rdf:resource="#Predicate"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="dtrVP">
+    <rdfs:range rdf:resource="#VP"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#generic_VP"/>
+          <owl:Class rdf:about="#you_want_to_VP"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="dtrPrep">
+    <rdfs:domain rdf:resource="#Prep_NP"/>
+    <rdfs:range rdf:resource="#Prep"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="dtrNP">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Prep_NP"/>
+          <owl:Class rdf:about="#NP_Adv"/>
+          <owl:Class rdf:about="#V2_NP"/>
+          <owl:Class rdf:about="#what_is_NP"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="#NP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="dtrN">
+    <rdfs:range rdf:resource="#N"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#which_N_sg"/>
+          <owl:Class rdf:about="#which_N_pl"/>
+          <owl:Class rdf:about="#which_N_do_you_want_to_V2"/>
+          <owl:Class rdf:about="#the_A_super_N_sg"/>
+          <owl:Class rdf:about="#the_N_sg"/>
+          <owl:Class rdf:about="#indef_N_sg"/>
+          <owl:Class rdf:about="#the_N_pl"/>
+          <owl:Class rdf:about="#indef_N_pl"/>
+          <owl:Class rdf:about="#this_N_sg"/>
+          <owl:Class rdf:about="#these_N_pl"/>
+          <owl:Class rdf:about="#indef_A_posit_N_sg"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="plan_if_false">
+    <rdfs:range rdf:resource="#Plan"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#IfThenElse"/>
+  </owl:FunctionalProperty>
+  <Action rdf:ID="help">
+    <usrRequest>
+      <use_V rdf:ID="help_VP">
+        <dtrV>
+          <V rdf:ID="help_V"/>
+        </dtrV>
+      </use_V>
+    </usrRequest>
+    <sysRequest rdf:resource="#help_VP"/>
+    <clauseForm>
+      <ClauseForm rdf:ID="isDoing"/>
+    </clauseForm>
+  </Action>
+  <which_N_pl rdf:ID="which_stop_"/>
+  <Prep_NP rdf:ID="to_Dest">
+    <dtrPrep>
+      <Prep rdf:ID="to_Prep"/>
+    </dtrPrep>
+    <dtrNP>
+      <Predicate rdf:ID="destination">
+        <sysAnswer>
+          <you_want_to_VP rdf:ID="you_want_to_go_to_Dest">
+            <dtrVP>
+              <V2_NP rdf:ID="go_to_Dest">
+                <dtrNP rdf:resource="#destination"/>
+                <dtrV2>
+                  <V2 rdf:ID="go_to_V2"/>
+                </dtrV2>
+                <dtrAdv rdf:resource="#to_Dest"/>
+              </V2_NP>
+            </dtrVP>
+            <dtrV2 rdf:resource="#go_to_V2"/>
+          </you_want_to_VP>
+        </sysAnswer>
+        <sort>
+          <Sort rdf:ID="stop">
+            <usrAnswer>
+              <NP_Adv rdf:ID="Stop_to_Dest">
+                <dtrAdv rdf:resource="#to_Dest"/>
+                <dtrNP rdf:resource="#stop"/>
+              </NP_Adv>
+            </usrAnswer>
+            <class rdf:resource="#Stop"/>
+            <sort rdf:resource="#Stop"/>
+            <usrAnswer>
+              <NP_Adv rdf:ID="Stop_from_Dept">
+                <dtrAdv>
+                  <Prep_NP rdf:ID="from_Dept">
+                    <dtrNP>
+                      <Predicate rdf:ID="departure">
+                        <sysQuestion>
+                          <which_N_do_you_want_to_V2 rdf:ID="which_stop_do_you_want_to_go_from">
+                            <dtrN>
+                              <N rdf:ID="stop_N"/>
+                            </dtrN>
+                            <dtrV2>
+                              <V2 rdf:ID="go_from_V2"/>
+                            </dtrV2>
+                          </which_N_do_you_want_to_V2>
+                        </sysQuestion>
+                        <usrAnswer rdf:resource="#from_Dept"/>
+                        <sysAnswer>
+                          <you_want_to_VP rdf:ID="you_want_to_go_from_Dept">
+                            <dtrAdv rdf:resource="#departure"/>
+                            <dtrVP>
+                              <V2_NP rdf:ID="go_from_Dept">
+                                <dtrAdv rdf:resource="#from_Dept"/>
+                                <dtrV2 rdf:resource="#go_from_V2"/>
+                                <dtrNP rdf:resource="#departure"/>
+                              </V2_NP>
+                            </dtrVP>
+                            <dtrV2 rdf:resource="#go_from_V2"/>
+                          </you_want_to_VP>
+                        </sysAnswer>
+                        <sort rdf:resource="#stop"/>
+                        <usrAnswer>
+                          <Prep_NP rdf:ID="from_Dept_to_Dest">
+                            <dtrPrep>
+                              <Prep rdf:ID="from_Prep"/>
+                            </dtrPrep>
+                            <dtrNP>
+                              <NP_Adv rdf:ID="Dept_to_Dest_NP">
+                                <dtrNP rdf:resource="#departure"/>
+                                <dtrAdv rdf:resource="#to_Dest"/>
+                              </NP_Adv>
+                            </dtrNP>
+                          </Prep_NP>
+                        </usrAnswer>
+                      </Predicate>
+                    </dtrNP>
+                    <dtrPrep rdf:resource="#from_Prep"/>
+                  </Prep_NP>
+                </dtrAdv>
+                <dtrNP rdf:resource="#stop"/>
+              </NP_Adv>
+            </usrAnswer>
+            <usrAnswer rdf:resource="#stop"/>
+          </Sort>
+        </sort>
+        <usrAnswer rdf:resource="#to_Dest"/>
+        <usrAnswer>
+          <Prep_NP rdf:ID="to_Dest_from_Dept">
+            <dtrPrep rdf:resource="#to_Prep"/>
+            <dtrNP>
+              <NP_Adv rdf:ID="Dest_from_Dept">
+                <dtrNP rdf:resource="#destination"/>
+                <dtrAdv rdf:resource="#from_Dept"/>
+              </NP_Adv>
+            </dtrNP>
+          </Prep_NP>
+        </usrAnswer>
+        <sysQuestion>
+          <which_N_do_you_want_to_V2 rdf:ID="which_stop_do_you_want_to_go_to">
+            <dtrV2 rdf:resource="#go_to_V2"/>
+            <dtrN rdf:resource="#stop_N"/>
+          </which_N_do_you_want_to_V2>
+        </sysQuestion>
+      </Predicate>
+    </dtrNP>
+  </Prep_NP>
+  <StatusFailed rdf:ID="failed_draw_route">
+    <action_or_command>
+      <DeviceCommand rdf:ID="draw_route">
+        <device>
+          <Device rdf:ID="tram_solver"/>
+        </device>
+      </DeviceCommand>
+    </action_or_command>
+  </StatusFailed>
+  <City rdf:ID="lerum"/>
+  <Findout rdf:ID="findout_destination">
+    <predicate rdf:resource="#destination"/>
+  </Findout>
+  <NP_Adv rdf:ID="the_shortest_route_to_Dest">
+    <dtrAdv rdf:resource="#to_Dest"/>
+    <dtrNP>
+      <the_A_super_N_sg rdf:ID="the_shortest_route">
+        <dtrA>
+          <A rdf:ID="short_A"/>
+        </dtrA>
+        <dtrN>
+          <N rdf:ID="route_N"/>
+        </dtrN>
+      </the_A_super_N_sg>
+    </dtrNP>
+  </NP_Adv>
+  <Stop rdf:ID="hogenskildsgatan"/>
+  <City rdf:ID="partille"/>
+  <City rdf:ID="kungalv"/>
+  <Stop rdf:ID="lilla_bommen">
+    <rdfs:label xml:lang="se">lilla bommen</rdfs:label>
+  </Stop>
+  <V2 rdf:ID="find_V2"/>
+  <Plan rdf:ID="find_route">
+    <plan_construct>
+      <DevDo rdf:ID="do_draw_route">
+        <precondition>
+          <DevQuery rdf:ID="query_shortest_route">
+            <predicate>
+              <Predicate rdf:ID="shortest_route">
+                <usrQuestion>
+                  <V2_NP rdf:ID="find_a_route">
+                    <dtrV2 rdf:resource="#find_V2"/>
+                    <dtrNP>
+                      <indef_N_sg rdf:ID="a_route">
+                        <dtrN rdf:resource="#route_N"/>
+                      </indef_N_sg>
+                    </dtrNP>
+                  </V2_NP>
+                </usrQuestion>
+                <sysQuestion>
+                  <what_is_NP rdf:ID="what_is_the_shortest_route">
+                    <dtrAdv rdf:resource="#the_shortest_route"/>
+                    <dtrNP rdf:resource="#the_shortest_route"/>
+                  </what_is_NP>
+                </sysQuestion>
+                <sort>
+                  <Sort rdf:ID="route">
+                    <class rdf:resource="#Route"/>
+                  </Sort>
+                </sort>
+                <usrQuestion>
+                  <what_is_NP rdf:ID="what_is_the_shortest_route_from_Dept">
+                    <dtrNP>
+                      <NP_Adv rdf:ID="the_shortest_route_from_Dept">
+                        <dtrAdv rdf:resource="#from_Dept"/>
+                        <dtrNP rdf:resource="#the_shortest_route"/>
+                      </NP_Adv>
+                    </dtrNP>
+                  </what_is_NP>
+                </usrQuestion>
+                <usrQuestion>
+                  <V2_NP rdf:ID="find_the_shortest_route">
+                    <dtrV2 rdf:resource="#find_V2"/>
+                    <dtrNP rdf:resource="#the_shortest_route"/>
+                  </V2_NP>
+                </usrQuestion>
+                <usrQuestion>
+                  <what_is_NP rdf:ID="what_is_the_shortest_route_to_Dest">
+                    <dtrNP rdf:resource="#the_shortest_route_to_Dest"/>
+                  </what_is_NP>
+                </usrQuestion>
+                <usrQuestion rdf:resource="#what_is_the_shortest_route"/>
+                <sysAnswer>
+                  <generic_VP rdf:ID="take_tram_x_from">
+                    <dtrVP>
+                      <V2_NP rdf:ID="take_tram_x_VP">
+                        <dtrV2>
+                          <V2 rdf:ID="take_V2"/>
+                        </dtrV2>
+                        <dtrNP rdf:resource="#shortest_route"/>
+                      </V2_NP>
+                    </dtrVP>
+                  </generic_VP>
+                </sysAnswer>
+              </Predicate>
+            </predicate>
+            <precondition>
+              <Findout rdf:ID="findout_departure">
+                <predicate rdf:resource="#departure"/>
+              </Findout>
+            </precondition>
+            <precondition rdf:resource="#findout_destination"/>
+            <device rdf:resource="#tram_solver"/>
+          </DevQuery>
+        </precondition>
+        <device_command rdf:resource="#draw_route"/>
+        <device rdf:resource="#tram_solver"/>
+      </DevDo>
+    </plan_construct>
+    <postcondition rdf:resource="#failed_draw_route"/>
+    <postcondition>
+      <Done rdf:ID="done_draw_route">
+        <action_or_command rdf:resource="#draw_route"/>
+      </Done>
+    </postcondition>
+    <plan_construct rdf:resource="#findout_departure"/>
+    <plan_construct rdf:resource="#findout_destination"/>
+    <plan_construct rdf:resource="#query_shortest_route"/>
+  </Plan>
+  <Leg rdf:ID="leg">
+    <argument_1 rdf:resource="#Line"/>
+    <argument_3 rdf:resource="#Stop"/>
+    <argument_2 rdf:resource="#Stop"/>
+  </Leg>
+  <Route rdf:ID="oneLeg">
+    <godis_semantics>
+      <GodisSemantics rdf:ID="pList1"/>
+    </godis_semantics>
+    <argument_1 rdf:resource="#Leg"/>
+  </Route>
+  <LegList rdf:ID="BaseLeg">
+    <argument_1 rdf:resource="#Leg"/>
+    <godis_semantics>
+      <GodisSemantics rdf:ID="pSeq"/>
+    </godis_semantics>
+    <argument_2 rdf:resource="#Leg"/>
+  </LegList>
+  <V2_NP rdf:ID="go_to_Dest_from_Dept">
+    <dtrAdv rdf:resource="#from_Dept"/>
+    <dtrNP rdf:resource="#destination"/>
+    <dtrV2 rdf:resource="#go_to_V2"/>
+  </V2_NP>
+  <Street rdf:ID="ceresgatan"/>
+  <Conj rdf:ID="and_then_Conj"/>
+  <Action rdf:ID="top">
+    <usrRequest>
+      <use_V rdf:ID="restart_VP">
+        <dtrV>
+          <V rdf:ID="restart_V"/>
+        </dtrV>
+      </use_V>
+    </usrRequest>
+    <clauseForm rdf:resource="#isDoing"/>
+    <sysRequest rdf:resource="#restart_VP"/>
+  </Action>
+  <ClauseForm rdf:ID="hasDone"/>
+  <Sort rdf:ID="location">
+    <usrAnswer rdf:resource="#location"/>
+    <class rdf:resource="#Location"/>
+  </Sort>
+  <Area rdf:ID="majorna"/>
+  <Stop rdf:ID="brunnsparken"/>
+  <Area rdf:ID="skargarden"/>
+  <which_N_do_you_want_to_V2 rdf:ID="which_stop_do_you_want_to_go_from_">
+    <dtrV2 rdf:resource="#go_from_V2"/>
+  </which_N_do_you_want_to_V2>
+  <Language rdf:ID="Swe">
+    <owlLang rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >se</owlLang>
+    <resourcePath rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >scandinavian</resourcePath>
+    <resourcePath rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >swedish</resourcePath>
+  </Language>
+  <City rdf:ID="alingsas"/>
+  <FerryLine rdf:ID="alvsnabben_ferry"/>
+  <Stop rdf:ID="rosenlund"/>
+  <V2_NP rdf:ID="restart_Stop">
+    <dtrV2 rdf:resource="#restart_V"/>
+    <dtrNP rdf:resource="#stop"/>
+  </V2_NP>
+  <Area rdf:ID="centrum"/>
+  <Route rdf:ID="mkRoute">
+    <godis_semantics>
+      <GodisSemantics rdf:ID="pBrackets"/>
+    </godis_semantics>
+    <argument_1 rdf:resource="#LegList"/>
+  </Route>
+  <BusLine rdf:ID="bus_16"/>
+  <which_N_pl rdf:ID="which_stop"/>
+  <Stop rdf:ID="korsvagen">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >korsvägen</rdfs:label>
+  </Stop>
+  <ForgetAll rdf:ID="forget_all"/>
+  <Language rdf:ID="Eng">
+    <owlLang rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >en</owlLang>
+    <resourcePath rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >english</resourcePath>
+  </Language>
+  <City rdf:ID="goteborg"/>
+  <Stop rdf:ID="valand"/>
+  <BusLine rdf:ID="bus_60"/>
+  <generic_VP rdf:ID="the_shortest_route_is_Route">
+    <dtrNP rdf:resource="#the_shortest_route"/>
+  </generic_VP>
+  <V2_NP rdf:ID="restart">
+    <dtrV2 rdf:resource="#restart_V"/>
+  </V2_NP>
+  <Stop rdf:ID="klippan"/>
+  <City rdf:ID="kungsbacka"/>
+  <you_want_to_VP rdf:ID="i_want_to_go_to_Dest_from_Dept">
+    <dtrVP rdf:resource="#go_to_Dest_from_Dept"/>
+    <dtrAdv rdf:resource="#Dest_from_Dept"/>
+    <dtrV2 rdf:resource="#go_to_V2"/>
+  </you_want_to_VP>
+  <V2_NP rdf:ID="help_me">
+    <dtrV2 rdf:resource="#help_V"/>
+  </V2_NP>
+  <you_want_to_VP rdf:ID="i_want_to_go_from_X_to_Y">
+    <dtrV2 rdf:resource="#go_from_V2"/>
+  </you_want_to_VP>
+  <City rdf:ID="molndal"/>
+  <Stop rdf:ID="lindholmen"/>
+  <Area rdf:ID="hisingen"/>
+  <GodisSemantics rdf:ID="pList2"/>
+  <GodisSemantics rdf:ID="pList3"/>
+  <TramLine rdf:ID="tram_4"/>
+  <Stop rdf:ID="kungsportsplatsen"/>
+  <TramLine rdf:ID="tram_5"/>
+  <LegList rdf:ID="ConsLeg">
+    <argument_1 rdf:resource="#Leg"/>
+    <godis_semantics rdf:resource="#pSeq"/>
+    <argument_2 rdf:resource="#LegList"/>
+  </LegList>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 2.2, Build 304)  http://protege.stanford.edu -->

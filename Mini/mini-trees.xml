@@ -1,0 +1,502 @@
+<treebank>
+<item>
+<tree>
+godis_utterance (BaseMove answer_no)
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseMove answer_yes)
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseMove greet)
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseMove quit)
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseMove (ask bookToBuy_Q))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseMove (ask action_Q))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseMove (ask issue_Q))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseMove (confirm buyBook))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseMove (request buyBook))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseMove (answer (bookToBuy_P theGreenBook)))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseMove (answerVP (action buyBook)))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseMove (answerVP (issue bookToBuy_Q)))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseMove (shortAns (book theGreenBook)))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseMove (answer (not (bookToBuy_P theGreenBook))))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseMove (askYNQ (vp_ynq (action buyBook))))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseMove (askYNQ (vp_ynq (issue bookToBuy_Q))))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseMove (askYNQ (ynq (bookToBuy_P theGreenBook))))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseMove (shortAns (notS (book theGreenBook))))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseMove (askAltQ (altq (BaseProposition (bookToBuy_P theGreenBook) (bookToBuy_P theGreenBook)))))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseMove (askAltQ (altq (ConsProposition (bookToBuy_P theGreenBook) (BaseProposition (bookToBuy_P theGreenBook) (bookToBuy_P theGreenBook))))))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseMove (askAltQ (vp_altq (BaseVPProposition (action buyBook) (action buyBook)))))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseMove (askAltQ (vp_altq (BaseVPProposition (action buyBook) (issue bookToBuy_Q)))))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseMove (askAltQ (vp_altq (BaseVPProposition (issue bookToBuy_Q) (action buyBook)))))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseMove (askAltQ (vp_altq (ConsVPProposition (action buyBook) (BaseVPProposition (issue bookToBuy_Q) (action buyBook))))))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM icm_acc_pos)
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM icm_accommodate)
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM icm_con_neg)
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM icm_loadplan)
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM icm_per_int)
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM icm_per_neg)
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM icm_reraise)
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM icm_sem_int)
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM icm_sem_neg)
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM icm_und_neg)
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_acc_neg_que bookToBuy_Q))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_acc_neg_que action_Q))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_acc_neg_que issue_Q))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_accommodate_act buyBook))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_accommodate_whq bookToBuy_Q))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_accommodate_whq action_Q))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_accommodate_whq issue_Q))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_reaccommodate_act buyBook))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_reaccommodate_whq bookToBuy_Q))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_reaccommodate_whq action_Q))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_reaccommodate_whq issue_Q))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_reraise_act buyBook))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_reraise_whq bookToBuy_Q))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_reraise_whq action_Q))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_reraise_whq issue_Q))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_sem_pos_move answer_no))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_sem_pos_move answer_yes))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_sem_pos_move greet))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_sem_pos_move quit))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_acc_neg_prop (bookToBuy_P theGreenBook)))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_sem_pos_move (ask bookToBuy_Q)))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_sem_pos_move (ask action_Q)))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_sem_pos_move (ask issue_Q)))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_sem_pos_move (confirm buyBook)))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_sem_pos_move (request buyBook)))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_sem_pos_shortAns (book theGreenBook)))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_und_int_negvp (action buyBook)))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_und_int_negvp (issue bookToBuy_Q)))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_und_int_prop (bookToBuy_P theGreenBook)))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_und_int_vp (action buyBook)))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_und_int_vp (issue bookToBuy_Q)))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_und_pos_negvp (action buyBook)))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_und_pos_negvp (issue bookToBuy_Q)))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_und_pos_prop (bookToBuy_P theGreenBook)))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_und_pos_vp (action buyBook)))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_und_pos_vp (issue bookToBuy_Q)))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_acc_neg_prop (not (bookToBuy_P theGreenBook))))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_accommodate_ynq (vp_ynq (action buyBook))))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_accommodate_ynq (vp_ynq (issue bookToBuy_Q))))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_accommodate_ynq (ynq (bookToBuy_P theGreenBook))))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_reaccommodate_ynq (vp_ynq (action buyBook))))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_reaccommodate_ynq (vp_ynq (issue bookToBuy_Q))))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_reaccommodate_ynq (ynq (bookToBuy_P theGreenBook))))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_reraise_ynq (vp_ynq (action buyBook))))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_reraise_ynq (vp_ynq (issue bookToBuy_Q))))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_reraise_ynq (ynq (bookToBuy_P theGreenBook))))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_sem_pos_move (answer (bookToBuy_P theGreenBook))))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_sem_pos_move (answerVP (action buyBook))))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_sem_pos_move (answerVP (issue bookToBuy_Q))))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_sem_pos_move (shortAns (book theGreenBook))))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_sem_pos_shortAns (notS (book theGreenBook))))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_und_int_prop (not (bookToBuy_P theGreenBook))))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_und_pos_prop (not (bookToBuy_P theGreenBook))))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_accommodate_altq (altq (BaseProposition (bookToBuy_P theGreenBook) (bookToBuy_P theGreenBook)))))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_accommodate_altq (vp_altq (BaseVPProposition (action buyBook) (issue bookToBuy_Q)))))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_reaccommodate_altq (altq (BaseProposition (bookToBuy_P theGreenBook) (bookToBuy_P theGreenBook)))))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_reaccommodate_altq (vp_altq (BaseVPProposition (issue bookToBuy_Q) (action buyBook)))))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_reraise_altq (altq (BaseProposition (bookToBuy_P theGreenBook) (bookToBuy_P theGreenBook)))))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_reraise_altq (vp_altq (BaseVPProposition (action buyBook) (issue bookToBuy_Q)))))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_sem_pos_move (answer (not (bookToBuy_P theGreenBook)))))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_sem_pos_move (askYNQ (vp_ynq (action buyBook)))))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_sem_pos_move (askYNQ (vp_ynq (issue bookToBuy_Q)))))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_sem_pos_move (askYNQ (ynq (bookToBuy_P theGreenBook)))))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_sem_pos_move (shortAns (notS (book theGreenBook)))))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_und_int_altq (altq (BaseProposition (bookToBuy_P theGreenBook) (bookToBuy_P theGreenBook)))))
+</tree>
+</item>
+<item>
+<tree>
+godis_utterance (BaseICM (icm_und_int_altq (vp_altq (BaseVPProposition (issue bookToBuy_Q) (action buyBook)))))
+</tree>
+</item>
+</treebank>

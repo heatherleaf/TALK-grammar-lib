@@ -1,0 +1,2 @@
+i -s output/TramSystem.gfcm
+rf tram-system-trees.xml | tb -trees | l -multi 

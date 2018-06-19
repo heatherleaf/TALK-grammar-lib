@@ -1,0 +1,64 @@
+14/12
+User
+
+ask_S (shortest_route__to Tynnered)
+minä tahdon mennä tynneredille ;
+
+++ask_S shortest_route
+++che cosa è l' itinerario più corto ;
+
+System
+
+godis_utterance (ConsICM icm_per_int (ConsMove (ask issue_Q) (BaseMove (shortAns (stop Sannaplan)))))
+Mitä sanoit ? tahdotte &+ ko te tietoa ? sannaplan .
+
+godis_utterance (BaseMove (askYNQ (ynq (shortest_route_P (mkRoute (BaseLeg (lineLeg Tram2 Tagene Solrosgatan) (lineLeg Bus62 HjBrantingsplatsen Kalleback)))))))
+¿ tomáis tranvía número 2 desde tagene a solrosgatan y después bus número 62 desde hjalmar brantingsplatsen a kalleback ?
+
+godis_utterance (BaseMove (request help))
+saakaa apua .
+pedid ayuda .
+trovate dell' aiuto .
+haben Sie Hilfe .
+ha hjälp .
+get help .
+trouvez de l' aide .
+
+
+godis_utterance (BaseMove (confirm help))
+minä olen saamassa apua .
+pido ayuda .
+trovo dell' aiuto .
+ich habe Hilfe .
+jag har hjälp .
+i am getting help .
+je trouve de l' aide .
+
+
+
+godis_utterance (ConsICM (icm_reraise_act top) (ConsMove (ask action_Q) (BaseICM (icm_und_int_prop (not (dept_stop_P Tynnered))))))
+volviendo a la pregunta empezar de nuevo . ¿ qué puedo hacer por usted ? ¿ no queréis ir desde tynnered , es correcto ?
+
+
+godis_utterance (ConsMove (shortAns (stop Linneplatsen)) (BaseICM (icm_acc_neg_prop (shortest_route_P (oneLeg (lineLeg Tram7 LillaBommen Rosenlund))))))
+linneplatsen . tomáis tranvía número 7 desde lilla bommen a rosenlund , no es una alternativa válida .
+linneplatsen . prende tram numero 7 da lilla bommen a rosenlund , non è un alternativa valida .
+
+godis_utterance (ConsICM (icm_reaccommodate_altq (vp_altq (BaseVPProposition (action top) (action help)))) (BaseMove (askYNQ (ynq (dest_stop_P SanktSigfridsplan)))))
+Återgår till frågan om om du vill starta om eller ha hjälp ? vill du åka till sankt sigfrids plan ?
+Returning to the issue of if you want to restart or get help ? do you want to go to sankt sigfrids plan ?
+
+godis_utterance (ConsICM icm_per_neg (BaseMove (ask issue_Q)))
+Minkä sinä sanot . tahdotte &+ ko te tietoa ?
+
+
+godis_utterance (ConsMove (answerVP (action top)) (BaseICM icm_sem_int))
+aloittaa alusta . Mitä tarkoitat ?
+
+
+
+godis_utterance (BaseMove (answerVP (issue shortest_route_Q)))
+tietää mikä on lyhyin reitti .
+saber qué es el itinerario más corto .
+sapere che cosa è l' itinerario più corto .
+++Sie wollen wissen was der kürzeste Weg ist .
