@@ -3,10 +3,20 @@ The TALK GF/GoDiS Grammar Library
 =================================
 
 This README was originally written 15 December 2006.
-The repository was uploaded to Github 19 June 2018.
 
-***Important note:***
+Important note, 19 June 2018
+------------------------------
+
+This repository was uploaded to Github 19 June 2018.
+
 The repository has not changed since 2006, but Grammatical Framework has changed a lot. So there are no guarantees whatsoever that these grammars can be compiled by GF off the shelf. 
+
+The grammars are described in the following project deliverables:
+
+  - Ljunglöf et al. *Multimodal Grammar Library*. TALK Project deliverable D1.2b, 2006.
+  - Ljunglöf et al. *Enhanced Multimodal Grammar Library*. TALK Project deliverable D1.5, 2006.
+
+Both deliverables can be found here: <http://www.cse.chalmers.se/~peb/bibliography.html> 
 
 Layout of the library
 ---------------------
